@@ -101,7 +101,7 @@ class AdminSpeakerController extends Controller
         $thumbnail = Input::file('thumbnail');
         $filename = time() . '.' . $thumbnail->getClientOriginalExtension();
         $path = public_path($folder . $filename);
-        Image::make($thumbnail->getRealPath())->resize('254', '254')->save($path);
+        Image::make($thumbnail->getRealPath())->fill('254', '254')->save($path);
         $thumbnail = ['thumbnail' => $folder . $filename];
         return $thumbnail;
     }

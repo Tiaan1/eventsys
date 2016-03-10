@@ -1,10 +1,10 @@
 <?php
 
-use App\Models\Speaker;
+use App\Models\Partner;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 
-class SpeakerSeeder extends Seeder
+class PartnerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,14 +16,12 @@ class SpeakerSeeder extends Seeder
         $faker = Faker::create();
         foreach(range(1,20) as $index)
         {
-            Speaker::create([
-                'full_name' => $faker->name,
-                'organisation' => $faker->company,
-                'job_title' => $faker->text('10'),
-                'bio' => $faker->paragraph,
-                'contact_number' => $faker->phoneNumber,
+            Partner::create([
+                'title' => $faker->name,
                 'email' => $faker->email,
                 'website' => $faker->url,
+                'description' => $faker->paragraph,
+                'contact_number' => $faker->phoneNumber,
             ]);
         }
     }

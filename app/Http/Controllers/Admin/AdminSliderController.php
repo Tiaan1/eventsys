@@ -81,7 +81,7 @@ class AdminSliderController extends Controller
         $thumbnail = Input::file('thumbnail');
         $filename = time() . '.' . $thumbnail->getClientOriginalExtension();
         $path = public_path($folder . $filename);
-        Image::make($thumbnail->getRealPath())->resize('2000', '688')->save($path);
+        Image::make($thumbnail->getRealPath())->fit('2000', '688')->save($path);
         $thumbnail = ['thumbnail' => $folder . $filename];
         return $thumbnail;
     }

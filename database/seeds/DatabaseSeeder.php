@@ -15,5 +15,9 @@ class DatabaseSeeder extends Seeder
 //         $this->call(HomePageSeeder::class);
 //         $this->call(AboutUsSeeder::class);
 //         $this->call(SpeakerSeeder::class);
+//            $this->call(CategorySeeder::class);
+//            $this->call(CategorySeeder::class);
+//            $this->call(EmailSeeder::class);
+//         $this->call(PartnerSeeder::class);
     }
 }

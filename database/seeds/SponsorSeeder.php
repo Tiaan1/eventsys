@@ -19,8 +19,6 @@ class SponsorSeeder extends Seeder
             Sponsor::create([
                 'title' => $faker->text(10),
                 'description' => $faker->paragraph,
-//                'slug' => $faker->text(10),
-//                'thumbnail' => $faker->image(public_path().'/assets/admin/images/test'),
                 'category_id' => $faker->numberBetween('1', '5'),
                 'contact_number' => $faker->phoneNumber,
                 'email' => $faker->email,

@@ -8,8 +8,6 @@
                 <span class="icon-bar"></span>
             </button>
 
-            {{--For text logo please uncomment the following line and comment out the second one.--}}
-            {{--<a class="navbar-brand" href="#">NPO Conference</a>--}}
             <a class="navbar-brand hidden-sm hidden-xs" href="/"><img src="/assets/frontend/img/npo.png" style="max-width: 170px;" alt=""></a>
         </div>
 
@@ -39,6 +37,7 @@
                             @if(auth()->user()->isAdmin())
                                 <li><a href="{{route('admin.dashboard')}}">Admin Section</a></li>
                             @endif
+                                <li>{{ link_to('profiles/'.getUser()->slug, 'My Account')}}</li>
                                 <li><a href="/logout">Log Out</a></li>
                         </ul>
                     </li>

@@ -33,6 +33,7 @@
                             @endforeach
                             </tbody>
                         </table>
+                        {{ $partners->render() }}
                     @else
                         There is no available partners, would you like to add
                         <a href="{{route('admin.partners.create')}}" style="text-decoration: none">some </a> ?

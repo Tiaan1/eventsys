@@ -157,6 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\ViewComposerServiceProvider::class,
 
+
         /*
          * Third Part Packages
          */
@@ -166,6 +167,7 @@ return [
         'Laracasts\Flash\FlashServiceProvider',
         'Intervention\Image\ImageServiceProvider',
         'Kamaln7\Toastr\ToastrServiceProvider',
+        Cmgmyr\Messenger\MessengerServiceProvider::class,
     ],
 
     /*

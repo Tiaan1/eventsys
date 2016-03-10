@@ -5,7 +5,6 @@ Route::group(['middleware' => ['web']], function () {
     // Registraton and Login Route.
     Route::auth();
 
-
     // AdminController Routes
     Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::get('view', ['as' => 'dashboard', 'uses' => 'Admin\AdminController@index']);
@@ -120,6 +119,19 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('pages/about/update/{id}', ['as' => 'pages.about.update', 'uses' => 'Admin\AdminAboutUsController@update']);
     });
 
+    Route::group(['prefix' => 'profile', 'as' => 'profile.'], function(){
+        Route::get('/{profile}/edit', ['as' => 'edit', 'uses' => 'Frontend\ProfileController@edit']);
+        Route::post('/{profile}/update', ['as' => 'update', 'uses' => 'Frontend\ProfileController@update']);
+    });
+
+    Route::group(['prefix' => 'messages'], function () {
+        Route::get('/', ['as' => 'messages', 'uses' => 'Frontend\MessagesController@index']);
+        Route::get('create', ['as' => 'messages.create', 'uses' => 'Frontend\MessagesController@create']);
+        Route::post('/', ['as' => 'messages.store', 'uses' => 'Frontend\MessagesController@store']);
+        Route::get('{id}', ['as' => 'messages.show', 'uses' => 'Frontend\MessagesController@show']);
+        Route::put('{id}', ['as' => 'messages.update', 'uses' => 'Frontend\MessagesController@update']);
+    });
+
     // SpeakerController Routes
         Route::get('speakers', ['as' => 'speakers', 'uses' => 'Frontend\SpeakerController@index']);
         Route::get('speaker/view/{slug}', ['as' => 'speakers.show', 'uses' => 'Frontend\SpeakerController@show']);
@@ -143,4 +155,7 @@ Route::group(['middleware' => ['web']], function () {
 
     // BookingsController Routes
         Route::get('bookings', ['as' => 'bookings.show', 'uses'=>'Frontend\BookingController@index']);
+
+    // Allow users to view profiles
+        Route::get('profiles/{profile}', ['as' => 'profiles', 'uses' => 'Frontend\ViewProfileController@show']);
 });

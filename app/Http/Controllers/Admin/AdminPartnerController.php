@@ -20,7 +20,7 @@ class AdminPartnerController extends Controller
 
     public function index()
     {
-        $partners = Partner::all();
+        $partners = Partner::paginate(10);
         return view('admin.partners.index', compact('partners'));
     }
 
@@ -88,7 +88,7 @@ class AdminPartnerController extends Controller
         $thumbnail = Input::file('thumbnail');
         $filename = time() . '.' . $thumbnail->getClientOriginalExtension();
         $path = public_path($folder . $filename);
-        Image::make($thumbnail->getRealPath())->resize('400', '200')->save($path);
+        Image::make($thumbnail->getRealPath())->fill('400', '200')->save($path);
         $thumbnail = ['thumbnail' => $folder . $filename];
         return $thumbnail;
     }

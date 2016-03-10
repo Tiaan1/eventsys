@@ -13,9 +13,11 @@
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
+        'full_name' => $faker->name,
         'email' => $faker->email,
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
+        'created_at' => $faker->dateTimeBetween('-2months', '+7months'),
+        'updated_at' => $faker->dateTimeBetween('-2months', '+7months')
     ];
 });

@@ -30,702 +30,750 @@
       <table id="21" parent="1" name="about_us"/>
       <table id="22" parent="1" name="settings"/>
       <table id="23" parent="1" name="visitor_registry"/>
-      <column id="24" parent="2" name="id">
+      <table id="24" parent="1" name="user_profiles"/>
+      <column id="25" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="25" parent="2" name="title">
+      <column id="26" parent="2" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="26" parent="2" name="description">
+      <column id="27" parent="2" name="description">
         <mandatory>1</mandatory>
         <data-type>longtext</data-type>
       </column>
-      <column id="27" parent="2" name="position">
+      <column id="28" parent="2" name="position">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="28" parent="2" name="created_at">
+      <column id="29" parent="2" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="29" parent="2" name="updated_at">
+      <column id="30" parent="2" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="30" parent="2" name="PRIMARY">
+      <key id="31" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="31" parent="3" name="id">
+      <column id="32" parent="3" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="32" parent="3" name="title">
+      <column id="33" parent="3" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="33" parent="3" name="slug">
+      <column id="34" parent="3" name="slug">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="34" parent="3" name="date">
+      <column id="35" parent="3" name="date">
         <mandatory>1</mandatory>
         <data-type>date</data-type>
       </column>
-      <column id="35" parent="3" name="deleted_at">
+      <column id="36" parent="3" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="36" parent="3" name="created_at">
+      <column id="37" parent="3" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="37" parent="3" name="updated_at">
+      <column id="38" parent="3" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="38" parent="3" name="PRIMARY">
+      <key id="39" parent="3" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="39" parent="4" name="migration">
+      <column id="40" parent="4" name="migration">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="40" parent="4" name="batch">
+      <column id="41" parent="4" name="batch">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="41" parent="5" name="email">
+      <column id="42" parent="5" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="42" parent="5" name="token">
+      <column id="43" parent="5" name="token">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="43" parent="5" name="created_at">
+      <column id="44" parent="5" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <index id="44" parent="5" name="password_resets_email_index">
+      <index id="45" parent="5" name="password_resets_email_index">
         <columns>email</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="45" parent="5" name="password_resets_token_index">
+      <index id="46" parent="5" name="password_resets_token_index">
         <columns>token</columns>
         <desc-columns></desc-columns>
       </index>
-      <column id="46" parent="6" name="id">
+      <column id="47" parent="6" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="47" parent="6" name="plenary_panel_id">
+      <column id="48" parent="6" name="plenary_panel_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="48" parent="6" name="speaker_id">
+      <column id="49" parent="6" name="speaker_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="49" parent="6" name="deleted_at">
+      <column id="50" parent="6" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="50" parent="6" name="created_at">
+      <column id="51" parent="6" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="51" parent="6" name="updated_at">
+      <column id="52" parent="6" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <index id="52" parent="6" name="plenary_panel_speaker_plenary_panel_id_foreign">
+      <index id="53" parent="6" name="plenary_panel_speaker_plenary_panel_id_foreign">
         <columns>plenary_panel_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="53" parent="6" name="PRIMARY">
+      <key id="54" parent="6" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="54" parent="6" name="plenary_panel_speaker_plenary_panel_id_foreign">
+      <foreign-key id="55" parent="6" name="plenary_panel_speaker_plenary_panel_id_foreign">
         <columns>plenary_panel_id</columns>
         <ref-key>~.plenary_panels.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="55" parent="7" name="id">
+      <column id="56" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="56" parent="7" name="title">
+      <column id="57" parent="7" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="57" parent="7" name="description">
+      <column id="58" parent="7" name="description">
         <mandatory>1</mandatory>
         <data-type>longtext</data-type>
       </column>
-      <column id="58" parent="7" name="time">
+      <column id="59" parent="7" name="time">
         <mandatory>1</mandatory>
         <data-type>time</data-type>
       </column>
-      <column id="59" parent="7" name="day_id">
+      <column id="60" parent="7" name="day_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="60" parent="7" name="deleted_at">
+      <column id="61" parent="7" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="61" parent="7" name="created_at">
+      <column id="62" parent="7" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="62" parent="7" name="updated_at">
+      <column id="63" parent="7" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <index id="63" parent="7" name="plenary_panels_day_id_foreign">
+      <index id="64" parent="7" name="plenary_panels_day_id_foreign">
         <columns>day_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="64" parent="7" name="PRIMARY">
+      <key id="65" parent="7" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="65" parent="7" name="plenary_panels_day_id_foreign">
+      <foreign-key id="66" parent="7" name="plenary_panels_day_id_foreign">
         <columns>day_id</columns>
         <ref-key>~.days.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="66" parent="8" name="id">
+      <column id="67" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="67" parent="8" name="title">
+      <column id="68" parent="8" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="68" parent="8" name="full_price">
+      <column id="69" parent="8" name="full_price">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="69" parent="8" name="early_bird">
+      <column id="70" parent="8" name="early_bird">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="70" parent="8" name="price_plan_id">
+      <column id="71" parent="8" name="price_plan_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="71" parent="8" name="created_at">
+      <column id="72" parent="8" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="72" parent="8" name="updated_at">
+      <column id="73" parent="8" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <index id="73" parent="8" name="price_plan_options_price_plan_id_foreign">
+      <index id="74" parent="8" name="price_plan_options_price_plan_id_foreign">
         <columns>price_plan_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="74" parent="8" name="PRIMARY">
+      <key id="75" parent="8" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="75" parent="8" name="price_plan_options_price_plan_id_foreign">
+      <foreign-key id="76" parent="8" name="price_plan_options_price_plan_id_foreign">
         <columns>price_plan_id</columns>
         <ref-key>~.price_plans.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="76" parent="9" name="id">
+      <column id="77" parent="9" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="77" parent="9" name="title">
+      <column id="78" parent="9" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="78" parent="9" name="early_bird_expiry">
+      <column id="79" parent="9" name="early_bird_expiry">
         <mandatory>1</mandatory>
         <data-type>date</data-type>
       </column>
-      <column id="79" parent="9" name="link">
+      <column id="80" parent="9" name="link">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="80" parent="9" name="created_at">
+      <column id="81" parent="9" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="81" parent="9" name="updated_at">
+      <column id="82" parent="9" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="82" parent="9" name="PRIMARY">
+      <key id="83" parent="9" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="83" parent="10" name="id">
+      <column id="84" parent="10" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="84" parent="10" name="stream_panel_id">
+      <column id="85" parent="10" name="stream_panel_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="85" parent="10" name="speaker_id">
+      <column id="86" parent="10" name="speaker_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="86" parent="10" name="deleted_at">
+      <column id="87" parent="10" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="87" parent="10" name="created_at">
+      <column id="88" parent="10" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="88" parent="10" name="updated_at">
+      <column id="89" parent="10" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <index id="89" parent="10" name="speaker_stream_panel_stream_panel_id_foreign">
+      <index id="90" parent="10" name="speaker_stream_panel_stream_panel_id_foreign">
         <columns>stream_panel_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="90" parent="10" name="PRIMARY">
+      <key id="91" parent="10" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="91" parent="10" name="speaker_stream_panel_stream_panel_id_foreign">
+      <foreign-key id="92" parent="10" name="speaker_stream_panel_stream_panel_id_foreign">
         <columns>stream_panel_id</columns>
         <ref-key>~.stream_panels.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="92" parent="11" name="id">
+      <column id="93" parent="11" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="93" parent="11" name="slug">
+      <column id="94" parent="11" name="slug">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="94" parent="11" name="email">
+      <column id="95" parent="11" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="95" parent="11" name="bio">
+      <column id="96" parent="11" name="bio">
         <mandatory>1</mandatory>
         <data-type>longtext</data-type>
       </column>
-      <column id="96" parent="11" name="website">
+      <column id="97" parent="11" name="website">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="97" parent="11" name="full_name">
+      <column id="98" parent="11" name="full_name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="98" parent="11" name="job_title">
+      <column id="99" parent="11" name="job_title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="99" parent="11" name="thumbnail">
+      <column id="100" parent="11" name="thumbnail">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="100" parent="11" name="organisation">
+      <column id="101" parent="11" name="organisation">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="101" parent="11" name="contact_number">
+      <column id="102" parent="11" name="contact_number">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="102" parent="11" name="deleted_at">
+      <column id="103" parent="11" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="103" parent="11" name="created_at">
+      <column id="104" parent="11" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="104" parent="11" name="updated_at">
+      <column id="105" parent="11" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="105" parent="11" name="PRIMARY">
+      <key id="106" parent="11" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="106" parent="12" name="id">
+      <column id="107" parent="12" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="107" parent="12" name="slug">
+      <column id="108" parent="12" name="slug">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="108" parent="12" name="email">
+      <column id="109" parent="12" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="109" parent="12" name="title">
+      <column id="110" parent="12" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="110" parent="12" name="website">
+      <column id="111" parent="12" name="website">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="111" parent="12" name="thumbnail">
+      <column id="112" parent="12" name="thumbnail">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="112" parent="12" name="description">
+      <column id="113" parent="12" name="description">
         <mandatory>1</mandatory>
         <data-type>longtext</data-type>
       </column>
-      <column id="113" parent="12" name="contact_number">
+      <column id="114" parent="12" name="contact_number">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="114" parent="12" name="category_id">
+      <column id="115" parent="12" name="category_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="115" parent="12" name="created_at">
+      <column id="116" parent="12" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="116" parent="12" name="updated_at">
+      <column id="117" parent="12" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <index id="117" parent="12" name="sponsors_category_id_foreign">
+      <index id="118" parent="12" name="sponsors_category_id_foreign">
         <columns>category_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="118" parent="12" name="PRIMARY">
+      <key id="119" parent="12" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="119" parent="12" name="sponsors_category_id_foreign">
+      <foreign-key id="120" parent="12" name="sponsors_category_id_foreign">
         <columns>category_id</columns>
         <ref-key>~.categories.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="120" parent="13" name="id">
+      <column id="121" parent="13" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="121" parent="13" name="time">
+      <column id="122" parent="13" name="time">
         <mandatory>1</mandatory>
         <data-type>time</data-type>
       </column>
-      <column id="122" parent="13" name="title">
+      <column id="123" parent="13" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="123" parent="13" name="stream_id">
+      <column id="124" parent="13" name="stream_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="124" parent="13" name="description">
+      <column id="125" parent="13" name="description">
         <mandatory>1</mandatory>
         <data-type>longtext</data-type>
       </column>
-      <column id="125" parent="13" name="deleted_at">
+      <column id="126" parent="13" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="126" parent="13" name="created_at">
+      <column id="127" parent="13" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="127" parent="13" name="updated_at">
+      <column id="128" parent="13" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <index id="128" parent="13" name="stream_panels_stream_id_foreign">
+      <index id="129" parent="13" name="stream_panels_stream_id_foreign">
         <columns>stream_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="129" parent="13" name="PRIMARY">
+      <key id="130" parent="13" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="130" parent="13" name="stream_panels_stream_id_foreign">
+      <foreign-key id="131" parent="13" name="stream_panels_stream_id_foreign">
         <columns>stream_id</columns>
         <ref-key>~.streams.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="131" parent="14" name="id">
+      <column id="132" parent="14" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="132" parent="14" name="title">
+      <column id="133" parent="14" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="133" parent="14" name="day_id">
+      <column id="134" parent="14" name="day_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="134" parent="14" name="deleted_at">
+      <column id="135" parent="14" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="135" parent="14" name="created_at">
+      <column id="136" parent="14" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="136" parent="14" name="updated_at">
+      <column id="137" parent="14" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <index id="137" parent="14" name="streams_day_id_foreign">
+      <index id="138" parent="14" name="streams_day_id_foreign">
         <columns>day_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="138" parent="14" name="PRIMARY">
+      <key id="139" parent="14" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="139" parent="14" name="streams_day_id_foreign">
+      <foreign-key id="140" parent="14" name="streams_day_id_foreign">
         <columns>day_id</columns>
         <ref-key>~.days.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="140" parent="15" name="id">
+      <column id="141" parent="15" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="141" parent="15" name="name">
+      <column id="142" parent="15" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="142" parent="15" name="email">
+      <column id="143" parent="15" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="143" parent="15" name="created_at">
+      <column id="144" parent="15" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="144" parent="15" name="updated_at">
+      <column id="145" parent="15" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="145" parent="15" name="PRIMARY">
+      <key id="146" parent="15" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="146" parent="16" name="id">
+      <column id="147" parent="16" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="147" parent="16" name="full_name">
+      <column id="148" parent="16" name="full_name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="148" parent="16" name="is_admin">
+      <column id="149" parent="16" name="slug">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="150" parent="16" name="is_admin">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="149" parent="16" name="email">
+      <column id="151" parent="16" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="150" parent="16" name="password">
+      <column id="152" parent="16" name="password">
         <mandatory>1</mandatory>
         <data-type>varchar(60)</data-type>
       </column>
-      <column id="151" parent="16" name="remember_token">
+      <column id="153" parent="16" name="remember_token">
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="152" parent="16" name="created_at">
+      <column id="154" parent="16" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="153" parent="16" name="updated_at">
+      <column id="155" parent="16" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <index id="154" parent="16" name="users_email_unique">
+      <index id="156" parent="16" name="users_email_unique">
         <columns>email</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="155" parent="16" name="PRIMARY">
+      <key id="157" parent="16" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="156" parent="16" name="users_email_unique">
+      <key id="158" parent="16" name="users_email_unique">
         <columns>email</columns>
         <underlying-index>users_email_unique</underlying-index>
       </key>
-      <column id="157" parent="17" name="id">
+      <column id="159" parent="17" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="158" parent="17" name="title">
+      <column id="160" parent="17" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="159" parent="17" name="file">
+      <column id="161" parent="17" name="file">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="160" parent="17" name="created_at">
+      <column id="162" parent="17" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="161" parent="17" name="updated_at">
+      <column id="163" parent="17" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="162" parent="17" name="PRIMARY">
+      <key id="164" parent="17" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="163" parent="18" name="id">
+      <column id="165" parent="18" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="164" parent="18" name="slug">
+      <column id="166" parent="18" name="slug">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="165" parent="18" name="title">
+      <column id="167" parent="18" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="166" parent="18" name="email">
+      <column id="168" parent="18" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="167" parent="18" name="website">
+      <column id="169" parent="18" name="website">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="168" parent="18" name="thumbnail">
+      <column id="170" parent="18" name="thumbnail">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="169" parent="18" name="description">
+      <column id="171" parent="18" name="description">
         <mandatory>1</mandatory>
         <data-type>longtext</data-type>
       </column>
-      <column id="170" parent="18" name="contact_number">
+      <column id="172" parent="18" name="contact_number">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="171" parent="18" name="created_at">
+      <column id="173" parent="18" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="172" parent="18" name="updated_at">
+      <column id="174" parent="18" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="173" parent="18" name="PRIMARY">
+      <key id="175" parent="18" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="174" parent="19" name="id">
+      <column id="176" parent="19" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="175" parent="19" name="thumbnail">
+      <column id="177" parent="19" name="thumbnail">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="176" parent="19" name="title">
+      <column id="178" parent="19" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="177" parent="19" name="date_location">
+      <column id="179" parent="19" name="date_location">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="178" parent="19" name="created_at">
+      <column id="180" parent="19" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="179" parent="19" name="updated_at">
+      <column id="181" parent="19" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="180" parent="19" name="PRIMARY">
+      <key id="182" parent="19" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="181" parent="20" name="id">
+      <column id="183" parent="20" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="182" parent="20" name="icon">
+      <column id="184" parent="20" name="icon">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="183" parent="20" name="title">
+      <column id="185" parent="20" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="184" parent="20" name="short_description">
+      <column id="186" parent="20" name="short_description">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="185" parent="20" name="created_at">
+      <column id="187" parent="20" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="186" parent="20" name="updated_at">
+      <column id="188" parent="20" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="187" parent="20" name="PRIMARY">
+      <key id="189" parent="20" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="188" parent="21" name="id">
+      <column id="190" parent="21" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="189" parent="21" name="title">
+      <column id="191" parent="21" name="title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="190" parent="21" name="description">
+      <column id="192" parent="21" name="description">
         <mandatory>1</mandatory>
         <data-type>longtext</data-type>
       </column>
-      <column id="191" parent="21" name="created_at">
+      <column id="193" parent="21" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="192" parent="21" name="updated_at">
+      <column id="194" parent="21" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="193" parent="21" name="PRIMARY">
+      <key id="195" parent="21" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="194" parent="22" name="id">
+      <column id="196" parent="22" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="195" parent="22" name="color">
+      <column id="197" parent="22" name="color">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="196" parent="22" name="created_at">
+      <column id="198" parent="22" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="197" parent="22" name="updated_at">
+      <column id="199" parent="22" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="198" parent="22" name="PRIMARY">
+      <key id="200" parent="22" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="199" parent="23" name="id">
+      <column id="201" parent="23" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="200" parent="23" name="ip">
+      <column id="202" parent="23" name="ip">
         <mandatory>1</mandatory>
         <data-type>varchar(32)</data-type>
       </column>
-      <column id="201" parent="23" name="country">
+      <column id="203" parent="23" name="country">
         <data-type>varchar(4)</data-type>
       </column>
-      <column id="202" parent="23" name="clicks">
+      <column id="204" parent="23" name="clicks">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="203" parent="23" name="created_at">
+      <column id="205" parent="23" name="created_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="204" parent="23" name="updated_at">
+      <column id="206" parent="23" name="updated_at">
         <data-type>timestamp</data-type>
       </column>
-      <key id="205" parent="23" name="PRIMARY">
+      <key id="207" parent="23" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
+      <column id="208" parent="24" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="209" parent="24" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="210" parent="24" name="bio">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="211" parent="24" name="location">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="212" parent="24" name="twitter_username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="213" parent="24" name="facebook_username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="214" parent="24" name="github_username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="215" parent="24" name="created_at">
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="216" parent="24" name="updated_at">
+        <data-type>timestamp</data-type>
+      </column>
+      <index id="217" parent="24" name="user_profiles_user_id_foreign">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="218" parent="24" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="219" parent="24" name="user_profiles_user_id_foreign">
+        <columns>user_id</columns>
+        <ref-key>~.users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
     </database-model>
   </data-source>
 </component>

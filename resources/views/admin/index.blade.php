@@ -1,10 +1,8 @@
 @extends('layouts.admin')
 
-
-
 @section('content')
     <div id="page-wrapper">
-        @include('admin.partials.page-header', ['PageHeader' => 'Administrator overview'])
+        @include('admin.partials.page-header', ['PageHeader' => 'System overview'])
 
         <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -160,7 +158,7 @@
                                 <i class="fa fa-ticket fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">0</div>
+                                <div class="huge">{{count(App\Models\PricePlan::all())}}</div>
                                 <div>Registration Plans</div>
                             </div>
                         </div>
@@ -178,19 +176,24 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
-                <canvas id="newspeakers" width="600px" height="400px"></canvas>
+            <div class="col-md-10 col-xs-10 col-lg-10 col-sm-10">
+                <h1 class="page-header">
+                    Members per Month
+                </h1>
             </div>
+            <canvas id="newspeakers" height="200px"></canvas>
         </div>
     </div>
-{{--    {{dd($speakers)}}--}}
 @endsection
 
 @section('scripts')
     <script src="/js/chartjs.min.js"></script>
     <script>
+        var months = {!! json_encode($months) !!};
+        var labels = Object.keys(months);
+        var dataArray = Object.keys(months).map(function(k){return months[k]});
         var data = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: labels,
             datasets: [
                 {
                     label: "My First dataset",
@@ -200,9 +203,11 @@
                     pointStrokeColor: "#fff",
                     pointHighlightFill: "#fff",
                     pointHighlightStroke: "rgba(220,220,220,1)",
-                    data : {!! json_encode($total) !!}},
+                    data: dataArray
+                }
             ]
         };
+
         // Get the context of the canvas element we want to select
         var countries= document.getElementById("newspeakers").getContext("2d");
         new Chart(countries).Bar(data);

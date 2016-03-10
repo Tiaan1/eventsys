@@ -5,6 +5,7 @@
 
 
     <section class="section dark section">
+        <div class="divider20"></div>
         <div class="container">
             <div class="row">
                 @if(count($boxes))

@@ -15,7 +15,9 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('full_name');
+            $table->string('slug');
             $table->boolean('is_admin')->default('0');
+            $table->enum('notify', ['y', 'n'])->default('y');
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->rememberToken();
